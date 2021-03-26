@@ -140,7 +140,7 @@ func Execute() error {
 	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stdout})
 
 	err := sentry.Init(sentry.ClientOptions{
-		TracesSampleRate: 0.3,
+		TracesSampleRate: 1,
 	})
 	if err != nil {
 		log.Err(err).Msg("Failed to initialize sentry")
